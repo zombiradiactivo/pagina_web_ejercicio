@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Byte Quest: capturas de pantalla, requisitos del sistema, instalación y multimedia.">
+  <title>Byte Quest — Requisitos y multimedia</title>
+  <link rel="icon" href="../images/logo-bytequest.png">
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header id="cabecera">
+    <img src="../images/logo-bytequest.png" alt="Logotipo de Byte Quest" width="110" height="110" class="logo">
+    <h1>Byte Quest</h1>
+    <p><em>Un videojuego de aventuras hecho por y para gente de informática.</em></p>
+  </header>
+
+  <nav class="menu" id="menu-principal">
+    <a href="../index.html">Inicio</a> |
+    <a href="historia.html">Historia y personajes</a> |
+    <a href="requisitos.html">Requisitos y multimedia</a> |
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="capturas">
+      <h2>Capturas de pantalla</h2>
+      <figure>
+        <img src="../images/mapa.jpg" alt="Mapa del Reino Digital" width="400" height="260">
+        <figcaption>El Reino Digital, mapa principal del juego.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/combate.jpg" alt="Combate de Kira contra un proceso corrupto" width="400" height="260">
+        <figcaption>Kira se enfrenta a un proceso corrupto.</figcaption>
+      </figure>
+    </section>
+
+    <hr>
+
+    <section id="requisitos">
+      <h2>Requisitos del sistema</h2>
+      <table border="1">
+        <caption>Requisitos del sistema de Byte Quest</caption>
+        <thead>
+          <tr>
+            <th>Requisito</th>
+            <th>Mínimos</th>
+            <th>Recomendados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sistema operativo</td>
+            <td>Windows 10 / Linux</td>
+            <td>Windows 11 / Linux</td>
+          </tr>
+          <tr>
+            <td><abbr title="Random Access Memory">RAM</abbr></td>
+            <td>4 GB</td>
+            <td>8 GB</td>
+          </tr>
+          <tr>
+            <td><abbr title="Graphics Processing Unit">GPU</abbr></td>
+            <td>Integrada</td>
+            <td>Dedicada, 2 GB</td>
+          </tr>
+          <tr>
+            <td>Espacio en disco</td>
+            <td>2 GB</td>
+            <td>4 GB (<abbr title="Solid State Drive">SSD</abbr>)</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Datos orientativos sujetos a cambios antes del lanzamiento.</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h3>Instalación desde la terminal</h3>
+      <p>Para la versión de desarrolladores, clona el repositorio e instala
+      las dependencias:</p>
+      <pre><code>git clone https://github.com/bytequest/juego.git
+cd juego
+npm install</code></pre>
+      <p>Para comentar una línea de HTML recuerda usar &lt;!-- comentario --&gt;.</p>
+      <p><samp>Byte Quest instalado correctamente. Escribe &quot;<kbd>npm start</kbd>&quot; para jugar.</samp></p>
+    </section>
+
+    <hr>
+
+    <section id="multimedia">
+      <h2>Multimedia</h2>
+      <h3>Tráiler</h3>
+      <video controls width="480">
+        <source src="videos/trailer.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo HTML5.
+      </video>
+
+      <h3>Banda sonora</h3>
+      <audio controls>
+        <source src="audio/tema-principal.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+      </audio>
+
+      <h3>Tráiler en YouTube</h3>
+      <iframe width="480" height="270"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Tráiler de Byte Quest" allowfullscreen>
+      </iframe>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer id="pie">
+    <p>Byte Quest Studio &amp; comunidad LMSGI<br>
+    IES Monte Naranco, Oviedo<br>
+    &copy; 2026 Byte Quest Studio</p>
+    <p>Página creada con fines educativos — <abbr title="Lenguajes de Marcas y Sistemas de Gestión de Información">LMSGI</abbr>, 1&ordm; DAM / DAW.</p>
+  </footer>
+
+</body>
+</html>

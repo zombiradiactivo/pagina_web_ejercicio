@@ -1,0 +1,352 @@
+/* ============================================================
+   Byte Quest — estilos.css
+   CSS acorde a lo estudiado en LMSGI UT2: hoja externa, selectores
+   de etiqueta/clase/id/descendiente, pseudo-clases, modelo de caja,
+   bordes y sombras, colores y fondos, tablas, unidades relativas,
+   posicionamiento (sticky) y Flexbox para el menú.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #2B2B2B;
+  background-color: #F7F9FC;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #0B1F3A;
+}
+
+a {
+  color: #0B1F3A;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F2A93B;
+  text-decoration: underline;
+}
+
+/* ===== Cabecera ===== */
+header#cabecera {
+  background-color: #0B1F3A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header#cabecera h1 {
+  color: #FFFFFF;
+  margin: 0.5rem 0 0;
+}
+
+.logo {
+  border-radius: 50%;
+  border: 3px solid #F2A93B;
+}
+
+/* ===== Menú: Flexbox + posicionamiento sticky ===== */
+nav.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  background-color: #11284D;
+  color: #FFFFFF;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+}
+
+nav.menu a {
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+nav.menu a:hover {
+  background-color: #F2A93B;
+  color: #0B1F3A;
+  text-decoration: none;
+}
+
+/* ===== Layout principal ===== */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #DCE3EC;
+  margin: 2rem 0;
+}
+
+/* Inicio: dos columnas con Flexbox */
+.layout-inicio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.articulo-principal {
+  flex: 2;
+  min-width: 16rem;
+}
+
+.datos-rapidos {
+  flex: 1;
+  min-width: 14rem;
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3EC;
+  border-left: 4px solid #2DA58D;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(11, 31, 58, 0.12);
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 4px solid #F2A93B;
+  background-color: #FFF7EB;
+  font-style: italic;
+}
+
+mark {
+  background-color: #F2A93B;
+  color: #0B1F3A;
+  padding: 0 0.3rem;
+  border-radius: 3px;
+}
+
+/* Personajes */
+.personaje {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3EC;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(11, 31, 58, 0.1);
+}
+
+.personaje:hover {
+  border-color: #2DA58D;
+  box-shadow: 0 4px 10px rgba(45, 165, 141, 0.25);
+}
+
+.personaje figure {
+  margin: 0;
+  text-align: center;
+}
+
+.personaje img {
+  border-radius: 8px;
+}
+
+.personaje figcaption {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-top: 0.4rem;
+}
+
+.etiqueta-clase {
+  background-color: #E7F5F1;
+  color: #2DA58D;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Capturas */
+#capturas figure {
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  text-align: center;
+}
+
+#capturas img {
+  border-radius: 8px;
+  border: 1px solid #DCE3EC;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+caption {
+  caption-side: top;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #0B1F3A;
+}
+
+th, td {
+  border: 1px solid #DCE3EC;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+thead th {
+  background-color: #0B1F3A;
+  color: #FFFFFF;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F0F4FA;
+}
+
+tbody tr:hover {
+  background-color: #FDF0DC;
+}
+
+tfoot td {
+  font-style: italic;
+  color: #6B7280;
+}
+
+/* Código */
+pre, code, kbd, samp {
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #0B1F3A;
+  color: #F7F9FC;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  background-color: #EEF2F8;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+kbd {
+  background-color: #0B1F3A;
+  color: #FFFFFF;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+samp {
+  color: #2DA58D;
+}
+
+/* Formulario */
+form {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3EC;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 28rem;
+  box-shadow: 0 2px 8px rgba(11, 31, 58, 0.12);
+}
+
+form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 0.75rem;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #C7D0DC;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 3px solid #2DA58D;
+  outline-offset: 1px;
+}
+
+form button {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #0B1F3A;
+  color: #FFFFFF;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #F2A93B;
+  color: #0B1F3A;
+}
+
+details {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3EC;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 4px rgba(11, 31, 58, 0.08);
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Pie */
+footer#pie {
+  background-color: #0B1F3A;
+  color: #C7D0DC;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer#pie h3 {
+  color: #FFFFFF;
+}
+
+footer#pie table {
+  max-width: 28rem;
+  margin: 1rem auto;
+  color: #2B2B2B;
+  background-color: #FFFFFF;
+}
+
+footer#pie a {
+  color: #F2A93B;
+}
